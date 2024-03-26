@@ -9,18 +9,18 @@ client.on('messageReactionAdd', (react, user) => {
     const cores = { // Coloque o ID do cargo em cada variável
         // Coloque o nome dos cargos com a inicial 'Cor'
         // Exemplo: Cor Azul, Cor Vermelho
-        azul: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get('1108956743020597298'),
-        vermelho: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get('1108956974646837339'),
-        laranja: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get('1108956976127426652'),
-        amarelo: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get('1108956977494753333'),
-        verde: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get('1108956979260575884'),
-        rosa: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get('1108956980799868948'),
-        roxo: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get('1108956982498574366'),
-        preto: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get('1108956984121774080'),
-        branco: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get('1108956985220669513')
+        azul: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get(''),
+        vermelho: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get(''),
+        laranja: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get(''),
+        amarelo: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get(''),
+        verde: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get(''),
+        rosa: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get(''),
+        roxo: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get(''),
+        preto: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get(''),
+        branco: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get('')
     }
 
-    if (react.message.channel.id === '976206625125855273') { // ID DO CANAL DA MENSAGEM
+    if (react.message.channel.id === '') { // ID DO CANAL DA MENSAGEM
         if (client.guilds.cache.get(react.message.channel.guildId).members.cache.get(user.id).roles.cache.find(role => role.name.startsWith('Cor'))) {
             client.guilds.cache.get(react.message.channel.guildId).members.cache.get(user.id).roles.remove(client.guilds.cache.get(react.message.channel.guildId).members.cache.get(user.id).roles.cache.find(role => role.name.startsWith('Cor')).id)
         } 
@@ -97,18 +97,18 @@ client.on('messageReactionRemove', (react, user) => {
     const cores = { // Coloque o ID do cargo em cada variável
         // Coloque o nome dos cargos com a inicial 'Cor'
         // Exemplo: Cor Azul, Cor Vermelho
-        azul: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get('1108956743020597298'),
-        vermelho: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get('1108956974646837339'),
-        laranja: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get('1108956976127426652'),
-        amarelo: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get('1108956977494753333'),
-        verde: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get('1108956979260575884'),
-        rosa: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get('1108956980799868948'),
-        roxo: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get('1108956982498574366'),
-        preto: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get('1108956984121774080'),
-        branco: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get('1108956985220669513')
+        azul: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get(''),
+        vermelho: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get(''),
+        laranja: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get(''),
+        amarelo: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get(''),
+        verde: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get(''),
+        rosa: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get(''),
+        roxo: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get(''),
+        preto: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get(''),
+        branco: client.guilds.cache.get(react.message.channel.guildId).roles.cache.get('')
     }
 
-    if (react.message.channel.id === '976206625125855273') { // ID DO CANAL DA MENSAGEM
+    if (react.message.channel.id === '') { // ID DO CANAL DA MENSAGEM
         if (react.emoji.name === '🔵') {
             react.message.reply(`Olá ${user}, você retirou a cor ${cores.azul} do seu nick.`).then(msg => {
                 client.guilds.cache.get(react.message.channel.guildId).members.cache.get(user.id).roles.remove(cores.azul)
