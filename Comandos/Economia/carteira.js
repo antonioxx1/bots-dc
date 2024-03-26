@@ -4,13 +4,13 @@ const db = new QuickDB()
 
 module.exports =  {
     name: "carteira",
-    description: "Veja a quantidade de moedas em sua carteira.",
+    description: "Veja a quantidade de dinheiro em sua carteira.",
     type: Discord.ApplicationCommandType.ChatInput,
     options: [
         {
             name: "usuário",
             type: Discord.ApplicationCommandOptionType.User,
-            description: "Veja a carteira de um usuário.",
+            description: "Veja a quantidade de dinheiro na carteira de um usuário.",
             required: false 
         }
     ],
