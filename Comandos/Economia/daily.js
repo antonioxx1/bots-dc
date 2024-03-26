@@ -24,16 +24,16 @@ module.exports =  {
 
         interaction.reply({ embeds: [embed], ephemeral:true });return;}else{cooldowns[interaction.user.id].lastCmd=Date.now()};
 
-        let quantia = Math.ceil(Math.random()* 5000); // Máximo de moedas
-        if (quantia < 1000) quantia = quantia + 1000; // Mínimo de moedas
+        let quantia = Math.ceil(Math.random()* 4000); // Máximo de moedas
+        if (quantia < 1000) quantia = quantia + 560; // Mínimo de moedas
 
         await db.add(`carteira_${interaction.user.id}`, quantia);
 
         let embed = new Discord.EmbedBuilder()
         .setColor("Green")
-        .setTitle("💰 Daily Resgatado!")
+        .setTitle("💰 Daily Resgatado com sucesso!")
         .setThumbnail(interaction.user.displayAvatarURL({ dynamic: true }))
-        .setDescription(`Você resgatou \`${quantia} moedas\` em seu daily.\nUtilize o comando \`/carteira\` para ver seu total de moedas.`)
+        .setDescription(`Você resgatou \`${quantia} moedas\` em seu daily.\nUtilize o comando \`/carteira\` para ver sua quantia no servidor.`)
 
         interaction.reply({ embeds: [embed] })
 
