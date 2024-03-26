@@ -27,8 +27,8 @@ module.exports = {
 
   run: async (client, interaction) => {
 
-    const staffRoleID = '1182776435681800364' // ID cargo de staff
-    const channelLogID = '1182777375222661190' // ID canal de logs
+    const staffRoleID = '' // ID cargo de staff
+    const channelLogID = '' // ID canal de logs
     const staffMember_Verification = interaction.options.getUser('staff')
     const staffMember = interaction.guild.members.cache.get(staffMember_Verification.id)
     const stars = interaction.options.getNumber('estrelas')
