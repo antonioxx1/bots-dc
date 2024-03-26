@@ -17,7 +17,7 @@ client.on("interactionCreate", (interaction) => {
           // Nova opção
   
           let nome = `📨-${interaction.user.name}`;
-          let categoria = "1174045753803554875" // Coloque o ID da categoria
+          let categoria = "" // Coloque o ID da categoria
   
           if (!interaction.guild.channels.cache.get(categoria)) categoria = null;
   
@@ -71,7 +71,7 @@ client.on("interactionCreate", (interaction) => {
           // Nova opção
   
           let nome = `📨-${interaction.user.id}`;
-          let categoria = "1174045753803554875" // Coloque o ID da categoria
+          let categoria = "" // Coloque o ID da categoria
   
           if (!interaction.guild.channels.cache.get(categoria)) categoria = null;
   
@@ -125,7 +125,7 @@ client.on("interactionCreate", (interaction) => {
           // Nova opção
   
           let nome = `📨-${interaction.user.id}`;
-          let categoria = "1174045753803554875" // Coloque o ID da categoria
+          let categoria = "" // Coloque o ID da categoria
   
           if (!interaction.guild.channels.cache.get(categoria)) categoria = null;
   
