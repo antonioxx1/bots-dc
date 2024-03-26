@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 
 module.exports = {
   name: "ticket", // Coloque o nome do comando
-  description: "Abra o painel de tickets.", // Coloque a descrição do comando
+  description: "Abra o painel de ticket no servidor.", // Coloque a descrição do comando
   type: Discord.ApplicationCommandType.ChatInput,
 
   run: async (client, interaction) => {
@@ -11,7 +11,7 @@ module.exports = {
         interaction.reply({ content: `Você não possui permissão para utilzar este comando!`, ephemeral: true })
     } else {
         let embed = new Discord.EmbedBuilder()
-        .setColor("Random")
+        .setColor("RED")
         .setAuthor({ name: interaction.guild.name, iconURL: interaction.guild.iconURL({ dynamic: true }) })
         .setDescription(`Abra um ticekt aqui no servidor selecionando uma das opções abaixo:`);
 
@@ -38,7 +38,7 @@ module.exports = {
             )
         );
 
-        interaction.reply({ content: `✅ Mensagem enviada!`, ephemeral: true })
+        interaction.reply({ content: `✅ Mensagem enviada com sucesso!`, ephemeral: true })
         interaction.channel.send({ embeds: [embed], components: [painel] })
     }
 
